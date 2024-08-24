@@ -51,9 +51,9 @@ const Carousel = () => {
     const profit = coin?.price_change_percentage_24h >= 0;
 
     return (
-      <CarouselItems to={`/crypto/${coin.id}`} key={coin.id}>
+      <CarouselItems key={coin.id}>
         <img
-          src={coin?.image}
+          src={coin.image}
           alt={coin.name}
           height="80"
           style={{ marginBottom: 10 }}
@@ -71,7 +71,7 @@ const Carousel = () => {
             {coin?.price_change_percentage_24h?.toFixed(2)}%
           </span>
         </span>
-        <span style={{ fontSize: 22, fontWeight: 500 }}>
+        <span style={{ fontSize: 22, fontWeight: 500, marginBottom: 10 }}>
           {symbol} {coin?.current_price.toFixed(2)}
         </span>
       </CarouselItems>
